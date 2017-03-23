@@ -1,11 +1,16 @@
 {
-  "name": "bigdrop-kit",
+  "name": "markup-kit",
   "version": "0.2.1",
-  "description": "Bigdrop kit modules",
-  "author": "Bigdrop <bigdrop@bigdropinc.com>",
+  "description": "markup-kit modules",
+  "author": "cox",
   "private": true,
   "dependencies": {
-    "jquery": "latest"
+    "foundation-sites": "^6.3.1",
+    "imagesloaded": "^4.1.1",
+    "isotope-layout": "^3.0.1",
+    "jquery-bridget": "^2.0.1",
+    "masonry-layout": "^4.1.1",
+    "slick-carousel": "^1.6.0"
   },
   "devDependencies": {
     "babel-plugin-transform-inline-environment-variables": "latest",
