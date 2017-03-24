@@ -1,0 +1,117 @@
+.tab-content {
+  width: 100%;
+  margin-top: 25px;
+
+  @include breakpoint(medium) {
+    margin-top: 75px;
+  }
+
+  @include breakpoint(large) {
+    float: left;
+    width: 33.33333%;
+    margin-left: 8.33333%;
+  }
+
+  .tab-item {
+    display: none;
+
+    p {
+      //color: $gray;
+      font-size: 16px;
+      line-height: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #E2E2E1;
+
+    }
+
+    h2 {
+      font-size: 30px !important;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #E2E2E1;
+    }
+  }
+}
+
+.tab-list {
+  position: relative;
+  width: 100%;
+
+  #_x30_1.active {
+    transform: translateX(-30px) translateY(-20px)
+  }
+
+  #_x30_2_1_.active {
+    transform: translateX(30px) translateY(-20px)
+  }
+
+  #_x30_3.active {
+    transform: translateX(0px) translateY(30px)
+  }
+
+  @include breakpoint(large) {
+    width: 50%;
+    float: left;
+  }
+
+  svg {
+    width: 90%;
+    max-width: 575px;
+    margin-top: 45px;
+    overflow: visible;
+    transition: all .3s ease;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    tspan {
+      &.st10 {
+        font-size: 30px;
+        text-decoration: underline;
+      }
+      &.small-span {
+        font-size: 18px;
+      }
+    }
+
+    &.active {
+      @include breakpoint(large) {
+        transform: translateX(0);
+      }
+    }
+
+    @include breakpoint(large) {
+      transform: translateX(50%);
+      margin-left: 10%;
+      left: 0;
+    }
+
+    g {
+      transition: all .3s ease;
+      transform: translateX(0) translateY(0);
+    }
+
+    g:hover,
+    g.active {
+      cursor: pointer;
+
+      .st0,
+      .st3,
+      .st4,
+      .st6,
+      .st7,
+      .st8,
+      .st9 {
+        fill: #f00;
+      }
+
+      tspan {
+        fill: #fff;
+      }
+    }
+  }
+}

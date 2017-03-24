@@ -10,11 +10,11 @@
 
 /// Font size attribute applied to `<html>` and `<body>`. We use 100% by default so the value is inherited from the user's browser settings.
 /// @type Number
-$global-font-size: 100% !default;
+$global-font-size: 14px !default;
 
 /// Global width of your site. Used by the grid to determine row width.
 /// @type Number
-$global-width: rem-calc(1200) !default;
+$global-width: rem-calc(1400) !default;
 
 /// Default line height for all type. `$global-lineheight` is 24px while `$global-font-size` is 16px
 /// @type Number
@@ -60,7 +60,7 @@ $body-font-color: $black !default;
 
 /// Font stack of the body.
 /// @type List
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif !default;
+$body-font-family: 'Open Sans', sans-serif !default;
 
 /// Set to `true` to enable antialiased type, using the `-webkit-font-smoothing` and `-moz-osx-font-smoothing` CSS properties.
 /// @type Boolean

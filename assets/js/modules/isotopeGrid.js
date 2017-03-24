@@ -4,7 +4,7 @@ var imagesLoaded = require('imagesloaded');
 jQueryBridget( 'isotope', Isotope, $ );
 
 
-exports default {
+export default {
     init() {
         this.masonryGrid();
     },
