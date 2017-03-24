@@ -1,3 +1,185 @@
-.header {
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  a {
+    color: $black;
+    text-transform: uppercase;
+  }
   
+  @include breakpoint(xlarge) {
+    max-width: 1560px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: flex-start;
+  }
+
+  .site-logo {
+    padding: 15px;
+    display: flex;
+    min-width: 140px;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1;
+
+    a {
+      display: block;
+    }
+  }
+
+  .site-nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $white;
+    transition: all .3s ease;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+
+      ul {
+        animation: fadeIn 1s ease;
+      }
+    }
+
+    @include breakpoint(xlarge) {
+      visibility: visible;
+      opacity: 1;
+      border-right: 1px solid $light-gray;
+      border-left: 1px solid $light-gray;
+      height: auto;
+      position: relative;
+    }
+
+    a {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include breakpoint(xlarge) {
+        flex-direction: row;
+
+        li {
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+
+  .site-tel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+    min-width: 155px;
+  }
+}
+
+.site-nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+.menu-button {
+  $w: 30px;
+  $h: 4px;
+
+  position: relative;
+  width: 30px;
+  height: 20px;
+  background: $white;
+  cursor: pointer;
+  display: block;
+
+  @include breakpoint(xlarge) {
+    display: none;
+  }
+
+  .sandwich {
+    width: $w;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 200;
+  }
+
+  .sw-topper {
+    position: relative;
+    top: 0;
+    width: $w;
+    height: $h;
+    background: rgba($black, 1);
+    border: none;
+    transition: transform 0.5s, top 0.2s;
+  }
+
+  .sw-bottom {
+    position: relative;
+    width: $w;
+    height: $h;
+    top: $h * 1;
+    background: rgba($black, 1);
+    border: none;
+    transition: transform 0.5s, top 0.2s;
+    transition-delay: 0.2s, 0s;
+  }
+
+  .sw-footer {
+    position: relative;
+    width: $w;
+    height: $h;
+    top: $h * 2;
+    background: rgba($black, 1);
+    border: none;
+    transition: all 0.5s;
+    transition-delay: 0.1s;
+  }
+
+  &.active {
+    .sw-topper {
+      top: 5px;
+      transform: rotate(-45deg);
+    }
+
+    .sw-bottom {
+      top: 1px;
+      transform: rotate(45deg);
+    }
+
+    .sw-footer {
+      opacity: 0;
+      top: 0;
+      transform: rotate(180deg);
+    }
+  }
 }
