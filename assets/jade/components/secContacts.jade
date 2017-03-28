@@ -1,0 +1,42 @@
+section#contacts.section.section-contacts.section-white
+	.row.overflow-hidden
+		.offset-section
+	.row
+		.small-12.large-6.columns
+			.contacts-title
+				h3 Мой рабочий адрес
+			.contacts-sub-title
+				p г. Москва, ул. Большая Садовая, д.10
+			.tab-wrapper
+				.tab-list
+					a(href="#" data-link='contact-map').tab-link.active Карта
+					a(href="#" data-link='contact-path').tab-link Как пройти?
+				.tab-content
+					.tab-item(data-tab='contact-map')
+						#map(data-lat='55.767049' data-lng='37.594075')
+					.tab-item(data-tab='contact-path')
+						img(src="../uploads/contacts.jpg", alt="pic")
+		.small-12.large-6.columns
+			.row
+				.small-12.medium-6.columns.small-order-1.large-order-1
+					.contacts-title
+						h3 Телефон
+					.contacts-sub-title
+						a(href="tel:+74952152149") +7 (495) 215-21-49
+				.small-12.medium-6.columns.small-order-2.large-order-2
+					.contacts-title
+						h3 Электронная почта
+					.contacts-sub-title
+						a(href="mailto:hello@galantsev.com") hello@galantsev.com
+				.small-12.columns.small-order-0.large-order-2
+					.form-wrapper
+						.title
+							h3 Напишите мне по любому интересующему вас поводу
+						form(action='#')
+							.input-row.required
+								input(placeholder='Ваше имя:' name='name')
+							.input-row.required
+								input(placeholder='Электронная почта:' name='email')
+							.input-row.required
+								textarea(placeholder='Сообщение:' name='message')
+							button.btn.btn--brd ОТправить

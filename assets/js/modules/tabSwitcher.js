@@ -4,25 +4,23 @@ export default {
     },
 
     tabSwitcher() {
-        $('#diagramm g').on('click', function(e) {
+        $('.tab-wrapper').each(function() {
+            var activeTab = $(this).find('.tab-link.active').attr('data-link');
+            $(this).find(`[data-tab='${activeTab}']`).addClass('active');
+        });
 
-            if ($(e.target).prop('tagName') == 'tspan') {
-                var anchor = $(e.target).parent().parent().parent().data('tab');
-            } else {
-                var anchor = $(e.target).parent().data('tab');
-            }
+        $('.tab-link').on('click', function(e) {
+            e.preventDefault();
+            let tab = $(this).attr('data-link');
 
-            $(this).parent('svg').addClass('active');
-
-            $('#diagramm g').removeClass('active');
-            $('.tab-item').css({
-                'display' : 'none'
-            });
-
+            $(e.target).closest('.tab-list').find('.tab-link').removeClass('active');
+            console.log($(e.target).closest('.tab-list').find('.tab-link'));
             $(this).addClass('active');
-            $('#' + anchor).css({
-                'display' : 'block'
-            });
+
+            if ($(`[data-tab=${tab}]`).length != 0) {
+                $(e.target).closest('.tab-wrapper').find('[data-tab]').removeClass('active');
+                $(`[data-tab='${tab}']`).addClass('active');
+            }
         });
     }
 }

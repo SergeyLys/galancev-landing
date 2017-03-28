@@ -1,0 +1,79 @@
+#map {
+  height: 480px;
+}
+
+.contacts-title {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c6cdd3;
+  margin-top: 55px;
+
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 100%;
+  //   bottom: 0;
+  //   height: 1px;
+  //   background: #c6cdd3;
+
+  //   @include breakpoint(large) {
+  //     width: calc(100% + 60px);
+  //     left: -30px;
+  //   }
+  // }
+
+  @include breakpoint(xxlarge) {
+    height: auto !important;
+  }
+
+  h3 {
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+.contacts-sub-title {
+  p,
+  a {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    font-weight: 700;
+    color: $black;
+  }
+
+  a {
+    border-bottom: 1px solid rgba($black, .2);
+
+    &:hover {
+      border-color: rgba($black, 1);
+    }
+  }
+}
+
+
+.overflow-hidden {
+  overflow: hidden;
+  max-width: 1360px;
+}
+
+.offset-section {
+  width: calc(100% + 60px);
+
+  > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.section-contacts {
+  .tab-list {
+    margin-top: 55px;
+    margin-bottom: 25px;
+  }
+
+  .form-wrapper {
+    margin-top: 95px;
+  }
+}

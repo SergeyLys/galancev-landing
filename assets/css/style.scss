@@ -4,10 +4,19 @@
 @import "libs/variables";
 @import "libs/mixins";
 @import "libs/fonts";
+@import "libs/slick/_slick.scss";
+@import "libs/slick/_slick-theme.scss";
+@import "libs/light-gallery/lightgallery";
 
 @import "components/site-header";
 @import "components/site-footer";
 
 @import "components/global";
+@import "components/_buttons.scss";
+@import "components/_secIntro.scss";
+@import "components/_secGrids.scss";
+@import "components/_secMaterials.scss";
+@import "components/_secTestimonials.scss";
+@import "components/_secContacts.scss";
 @import "components/tabs";
 
