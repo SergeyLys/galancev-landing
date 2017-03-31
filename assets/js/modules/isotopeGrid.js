@@ -26,7 +26,11 @@ export default {
                     }
                 }
             });
+
+            $('.masonry').isotope({ filter: '.projects' });
         });
+
+
 
         $(window).on('load', function() {
             $('.masonry:not(.noinit)').on('masonry', function (e) {
@@ -120,6 +124,13 @@ export default {
                     });
                 }
             }, "json").fail(function (error) {});
+        });
+
+        $('[data-isotope-filter]').on('click', function() {
+            var filterValue = $(this).attr('data-isotope-filter');
+            $('.tabs .tab-item').removeClass('active');
+            $(`.tabs [data-filter='${filterValue}']`).addClass('active');
+            $('.masonry').isotope({ filter: filterValue });
         });
 
         $('.tabs .tab-item a').on('click', function (e) {

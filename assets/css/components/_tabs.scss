@@ -207,17 +207,32 @@
   }
 }
 
-a.tab-link {
-  color: $black;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 5px 10px;
-  text-transform: uppercase;
-  border: 1px solid transparent;
+.tab-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 
-  &.active {
-    color: #657280;
-    border-color: #657280;
-    border-radius: 20px;
+  a {
+    color: $black;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+
+    &.active {
+      color: #657280;
+      border-color: #657280;
+      border-radius: 20px;
+    }
+  }
+
+  li.active {
+    a {
+      color: #657280;
+      border-color: #657280;
+      border-radius: 20px;
+    }
   }
 }
