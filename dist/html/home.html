@@ -679,18 +679,20 @@
                     <div class="title">
                       <h3>Напишите мне по любому интересующему вас поводу</h3>
                     </div>
-                    <form action="#">
-                      <div class="input-row required">
-                        <input placeholder="Ваше имя:" name="name">
-                      </div>
-                      <div class="input-row required">
-                        <input placeholder="Электронная почта:" name="email">
-                      </div>
-                      <div class="input-row required">
-                        <textarea placeholder="Сообщение:" name="message"></textarea>
-                      </div>
-                      <button class="btn btn--brd">ОТправить</button>
-                    </form>
+                    <div class="form-holder">
+                      <form action="../../example.json" method="get" class="form">
+                        <fieldset class="input-row required">
+                          <input placeholder="Ваше имя:" name="name">
+                        </fieldset>
+                        <fieldset class="input-row required">
+                          <input placeholder="Электронная почта:" name="email">
+                        </fieldset>
+                        <fieldset class="input-row required">
+                          <textarea placeholder="Сообщение:" name="message"></textarea>
+                        </fieldset>
+                        <button class="btn btn--brd">ОТправить</button>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>

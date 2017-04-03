@@ -32,11 +32,12 @@ section#contacts.section.section-contacts.section-white
 					.form-wrapper
 						.title
 							h3 Напишите мне по любому интересующему вас поводу
-						form(action='#')
-							.input-row.required
-								input(placeholder='Ваше имя:' name='name')
-							.input-row.required
-								input(placeholder='Электронная почта:' name='email')
-							.input-row.required
-								textarea(placeholder='Сообщение:' name='message')
-							button.btn.btn--brd ОТправить
+						.form-holder
+							form(action="../../example.json" method="get").form
+								fieldset.input-row.required
+									input(placeholder='Ваше имя:' name='name')
+								fieldset.input-row.required
+									input(placeholder='Электронная почта:' name='email')
+								fieldset.input-row.required
+									textarea(placeholder='Сообщение:' name='message')
+								button.btn.btn--brd ОТправить
