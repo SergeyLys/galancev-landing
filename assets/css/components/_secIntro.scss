@@ -2,6 +2,14 @@
     padding-top: 45px;
     position: relative;
 
+    .feed__list {
+        opacity: .5;
+
+        span, a {
+            font-size: 20px;
+        }
+    }
+
     @include breakpoint(medium) {
         padding-top: 75px;
     }
@@ -19,7 +27,15 @@
         text-align: center;
         padding-bottom: 30px;
         margin-bottom: 45px;
-        border-bottom: 1px solid $light-gray;
+        border-bottom: 1px solid rgba($light-gray, .2);
+
+        h1 {
+            line-height: 36px;
+
+            @include breakpoint(medium) {
+                line-height: 50px;
+            }
+        }
     }
 
     .intro-text {
@@ -61,8 +77,12 @@
             height: 100%;
             left: 0;
             top: 0;
-            background: rgba($black, .33);
+            background: rgba($black, .66);
             z-index: -1;
+        }
+
+        .feed__list {
+            opacity: .5;
         }
 
         *:not(.btn) {

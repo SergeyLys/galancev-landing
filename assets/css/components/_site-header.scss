@@ -60,6 +60,17 @@
       }
     }
 
+    .nav-wrapper {
+      @media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 568px)
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (orientation: landscape) {
+        height: 75vh;
+        overflow: auto;
+      }
+    }
+
     @include breakpoint(xlarge) {
       visibility: visible;
       opacity: 1;
@@ -70,17 +81,25 @@
     }
 
     a {
-      font-size: 12px;
       font-weight: 700;
+      font-size: 18px;
+      line-height: 60px;
+
+      @include breakpoint(xlarge) {
+        font-size: 12px;
+        line-height: 1;
+      }
     }
 
     ul {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
 
       @include breakpoint(xlarge) {
         flex-direction: row;
+        align-items: flex-start;
 
         li {
           margin: 0 15px;
@@ -96,6 +115,10 @@
     padding: 15px;
     position: relative;
     min-width: 155px;
+
+    a {
+      font-weight: 600;
+    }
   }
 }
 
