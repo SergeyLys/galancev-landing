@@ -6,8 +6,8 @@ export default {
     },
 
     sharrre() {
-        if ($('.feed__list .fa-twitter').length) {
-            $('.feed__list .fa-twitter').sharrre({
+        if ($('.feed__list .icon-twitter').length) {
+            $('.feed__list .icon-twitter').sharrre({
                 share: {twitter: true},
                 url: $(this).data('url') != 'undefined' ? $(this).data('url') : '',
                 text: $(this).data('text') != 'undefined' ? $(this).data('text') : '',
@@ -22,8 +22,8 @@ export default {
                 }
             });
         }
-        if ($('.feed__list .fa-facebook').length) {
-            $('.feed__list .fa-facebook').sharrre({
+        if ($('.feed__list .icon-facebook').length) {
+            $('.feed__list .icon-facebook').sharrre({
                 share: {facebook: true},
                 url: $(this).data('url') != 'undefined' ? $(this).data('url') : '',
                 text: $(this).data('text') != 'undefined' ? $(this).data('text') : '',

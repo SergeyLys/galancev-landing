@@ -107,6 +107,18 @@ body {
   font-weight: 700;
 }
 
+.form-title{
+  margin-bottom: 14px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 900;
+}
+
+.form-descr{
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 40px;
+}
 .form-wrapper {
   .title {
     margin-bottom: 30px;
@@ -120,6 +132,12 @@ body {
         width: 75%;
       }
     }
+  }
+
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
   }
 
   .input-row {
@@ -144,6 +162,30 @@ body {
       padding-bottom: 5px;
       margin-bottom: 25px;
       width: 100%;
+
+      @include placeholder {
+        // color: inherit;
+      }
+      
+
+      &.error {
+        border-bottom: 1px solid $active;
+        box-shadow: 0 1px 0 0 $active;
+        color: $active; 
+
+        @include placeholder {
+          color: $active;
+        }
+      }
+
+      + label.error {
+        font-size: 14px;
+        line-height: 18px;
+        display: block;
+        bottom: 5px;
+        position: absolute;
+        color: $active;
+      }
     }
 
     textarea {
@@ -152,3 +194,10 @@ body {
     }
   }
 }
+
+// input,
+// textarea {
+//   @include placeholder {
+//     color: $active !important;
+//   }
+// }

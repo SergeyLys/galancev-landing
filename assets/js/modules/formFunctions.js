@@ -27,7 +27,6 @@ import '../libs/jquery.validate.js';
                 submitHandler: function submitHandler(form, e) {
                     e.preventDefault();
                     var $form = $(that);
-                    if (!$form.hasClass('.buy-form')) {
                         $.ajax({
                             type: $form.attr('method'),
                             url: $form.attr('action'),
@@ -99,7 +98,6 @@ import '../libs/jquery.validate.js';
                                 }, 200);
                             });
                         });
-                    }
 
                 }
             });
@@ -113,6 +111,6 @@ export default {
     },
 
     validation() {
-
+        $('form').formSubmit();
     }
 }

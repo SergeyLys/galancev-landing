@@ -14,6 +14,13 @@
   font-weight: 700;
 }
 
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

@@ -12,7 +12,7 @@ $input-color: $black !default;
 
 /// Font color of placeholder text within text inputs.
 /// @type Color
-$input-placeholder-color: $medium-gray !default;
+// $input-placeholder-color: $medium-gray !default;
 
 /// Font family of text inputs.
 /// @type Font
@@ -132,7 +132,7 @@ $form-button-radius: $global-radius !default;
   textarea {
     // Placeholder text
     &::placeholder {
-      color: $input-placeholder-color;
+      // color: $input-placeholder-color;
     }
 
     // Disabled/readonly state
