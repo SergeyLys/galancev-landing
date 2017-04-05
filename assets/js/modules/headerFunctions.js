@@ -4,6 +4,7 @@ export default {
     init(){
         this.headerFunctions();
         this.oneHeight();
+        this.scrollToAnchor();
     },
 
     headerFunctions () {
@@ -41,5 +42,18 @@ export default {
                 });
             }
         }
+    },
+
+    scrollToAnchor() {
+        $('.has-anchor').on('click', function(e) {
+            e.preventDefault();
+            let anchor = $(this).attr('href');
+
+            if ($(anchor).length != 0) {
+                $('body, html').animate({
+                    scrollTop: $(anchor).offset().top
+                }, 500);
+            }
+        });
     }
 };
