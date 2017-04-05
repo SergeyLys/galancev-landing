@@ -3446,11 +3446,6 @@ body
     padding-top: 45px;
 }
 
-.intro-section .feed__list
-{
-    opacity: .5;
-}
-
 .intro-section .feed__list span,
 .intro-section .feed__list a
 {
@@ -3478,7 +3473,7 @@ body
 
     text-align: center;
 
-    border-bottom: 1px solid rgba(222, 227, 231, .2);
+    border-bottom: 1px solid #c6cdd3;
 }
 
 .intro-section .intro-title h1
@@ -3511,6 +3506,16 @@ body
 .intro-section.has-background
 {
     z-index: 1;
+}
+
+.intro-section.has-background .feed__list
+{
+    opacity: .5;
+}
+
+.intro-section.has-background .intro-title
+{
+    border-bottom: 1px solid rgba(222, 227, 231, .2);
 }
 
 .intro-section.has-background:before
