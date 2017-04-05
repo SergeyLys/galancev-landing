@@ -3,8 +3,6 @@
     position: relative;
 
     .feed__list {
-        opacity: .5;
-
         span, a {
             font-size: 20px;
         }
@@ -27,7 +25,7 @@
         text-align: center;
         padding-bottom: 30px;
         margin-bottom: 45px;
-        border-bottom: 1px solid rgba($light-gray, .2);
+        border-bottom: 1px solid #c6cdd3;
 
         h1 {
             line-height: 36px;
@@ -69,6 +67,14 @@
 
     &.has-background {
         z-index: 1;
+
+        .feed__list {
+            opacity: .5;
+        }
+
+        .intro-title {
+            border-bottom: 1px solid rgba($light-gray, .2);
+        }
 
         &:before {
             content: '';
