@@ -3792,6 +3792,8 @@ body
 
 .isotope-filter .tab-list li
 {
+    display: none;
+
     margin-bottom: 7px;
 }
 
