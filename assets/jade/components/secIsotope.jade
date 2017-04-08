@@ -3,10 +3,10 @@ section
         .small-24.columns
             .isotope-filter
                 ul.tabs.tab-list
-                    li.tab-item.active(data-filter='.projects'): a(href='#') Проекты
-                    li.tab-item(data-filter='.books'): a(href='#') Книги
-                    li.tab-item: a(href='#') Статьи
-                    li.tab-item: a(href='#') Видео
+                    li.tab-item.active(data-filter='.projects' data-active-tab='experience'): a(href='#') Проекты
+                    li.tab-item(data-filter='.books' data-active-tab='expert'): a(href='#') Книги
+                    li.tab-item(data-active-tab='expert'): a(href='#') Статьи
+                    li.tab-item(data-active-tab='expert'): a(href='#') Видео
     .masonry-wrap.section-white.section
         .masonry-overflow
             .row.masonry

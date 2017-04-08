@@ -10,7 +10,18 @@ export default {
     },
 
     masonryGrid () {
-        $(window).on('load', function() {
+
+        var filterTab = $('#diagramm').find('.tab-link.active').attr('data-link');
+        $('.tabs.tab-list .tab-item').css({
+            'visibility': 'hidden',
+            'position': 'absolute'
+        });
+        $(`.tabs [data-active-tab='${filterTab}']`).css({
+            'visibility': 'visible',
+            'position': 'relative'
+        });
+
+        function masonryInit() {
             $('.masonry:not(.noinit)').isotope({
                 itemSelector: '.masonry-item',
                 columnWidth: '.masonry-item',
@@ -28,9 +39,11 @@ export default {
             });
 
             $('.masonry').isotope({ filter: '.projects' });
+        }
+
+        $(window).on('load', function() {
+            masonryInit();
         });
-
-
 
         $(window).on('load', function() {
             $('.masonry:not(.noinit)').on('masonry', function (e) {
@@ -40,6 +53,8 @@ export default {
                     $('.masonry').isotope({ sortBy: 'time', sortAscending: false });
                 }, 0);
             });
+
+
         });
 
         $('#btn-more-articles').on('click', function (event) {
@@ -128,9 +143,33 @@ export default {
 
         $('[data-isotope-filter]').on('click', function() {
             var filterValue = $(this).attr('data-isotope-filter');
+            var filterTab = $(this).attr('data-link');
             $('.tabs .tab-item').removeClass('active');
             $(`.tabs [data-filter='${filterValue}']`).addClass('active');
-            $('.masonry').isotope({ filter: filterValue });
+            
+            if (filterValue != '') {
+                $('.tabs.tab-list .tab-item').css({
+                    'visibility': 'hidden',
+                    'position': 'absolute'
+                });
+                $(`.tabs [data-active-tab='${filterTab}'], .masonry-wrap`).css({
+                    'visibility': 'visible',
+                    'position': 'relative'
+                });
+                $('.masonry').isotope({ filter: filterValue });
+            } else {
+                $(`[data-active-tab], .masonry-wrap`).css({
+                    'visibility': 'hidden',
+                    'position': 'absolute'
+                });
+            }
+            
+            
+            if ($(`.tabs [data-active-tab='${filterTab}']`).length != 0) {
+                
+            } else {
+                
+            }
         });
 
         $('.tabs .tab-item a').on('click', function (e) {

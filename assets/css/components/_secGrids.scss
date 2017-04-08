@@ -76,9 +76,13 @@
 	.numeric-grid-item {
 		counter-increment: counter;
 		margin-bottom: 50px;
+		display: flex;
+		flex: 1;
 
 		.grid-item {
-			height: 100%;
+			display: block;
+			margin-bottom: 0;
+			padding-bottom: 30px;
 
 			&:after {
 				content: '';

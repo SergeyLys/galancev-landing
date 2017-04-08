@@ -14,7 +14,6 @@ export default {
             let tab = $(this).attr('data-link');
 
             $(e.target).closest('.tab-list').find('.tab-link').removeClass('active');
-            console.log($(e.target).closest('.tab-list').find('.tab-link'));
             $(this).addClass('active');
 
             if ($(`[data-tab=${tab}]`).length != 0) {
